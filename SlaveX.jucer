@@ -4,7 +4,7 @@
               displaySplashScreen="1" jucerFormatVersion="1" companyName="Cloud Vision Ltd."
               companyCopyright="Cloud Vision Ltd." companyWebsite="https://cloudvision.bg"
               companyEmail="bobi@cloudvision.bg" splashScreenColour="Dark"
-              projectType="audioplug" pluginFormats="buildStandalone,buildVST3">
+              projectType="audioplug" pluginFormats="buildVST3">
   <MAINGROUP id="bbkR0e" name="SlaveX">
     <GROUP id="{159D1182-B3FD-FFE1-6C83-12E309EEBEBE}" name="Source">
       <FILE id="RX2QXT" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"
@@ -14,7 +14,8 @@
       <FILE id="X3Pwtq" name="SlaveX.h" compile="0" resource="0" file="Source/SlaveX.h"/>
     </GROUP>
   </MAINGROUP>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_PLUGINHOST_VST3="1" JUCE_PLUGINHOST_VST="0"
+               JUCE_CUSTOM_VST3_SDK="0" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
     <VS2019 targetFolder="Builds/VisualStudio2019">
       <CONFIGURATIONS>
