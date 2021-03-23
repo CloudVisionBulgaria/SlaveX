@@ -4,14 +4,19 @@
               displaySplashScreen="1" jucerFormatVersion="1" companyName="Cloud Vision Ltd."
               companyCopyright="Cloud Vision Ltd." companyWebsite="https://cloudvision.bg"
               companyEmail="bobi@cloudvision.bg" splashScreenColour="Dark"
-              projectType="audioplug" pluginFormats="buildVST">
+              projectType="audioplug" pluginFormats="buildStandalone">
   <MAINGROUP id="bbkR0e" name="SlaveX">
     <GROUP id="{159D1182-B3FD-FFE1-6C83-12E309EEBEBE}" name="Source">
+      <FILE id="dCN72n" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="U4Ygoo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="AvaV9O" name="SimpleMeter.h" compile="0" resource="0" file="Source/SimpleMeter.h"/>
+      <FILE id="YKNwoN" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="yg6TpJ" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
       <FILE id="RX2QXT" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"
             xcodeResource="0" skipPCH="0"/>
-      <FILE id="oYgE5W" name="InterAppAudioEffectPluginDemo.h" compile="0"
-            resource="0" file="Source/InterAppAudioEffectPluginDemo.h"/>
-      <FILE id="X3Pwtq" name="SlaveX.h" compile="0" resource="0" file="Source/SlaveX.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_PLUGINHOST_VST3="1" JUCE_PLUGINHOST_VST="0"
