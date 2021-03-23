@@ -20,11 +20,11 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	setSize(600, 300); //Setting the size of the program.
 
 	//The setup for volume slider with the label. 
-	volumeLabel.setText("МАМо", juce::NotificationType::dontSendNotification);
+	volumeLabel.setText("Volume", juce::NotificationType::dontSendNotification);
 	volumeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	volumeSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
-	volumeSlider.setRange(0.0, 48.0, 0.01);
-	volumeSlider.setLookAndFeel(&slaveXFeel);
+	volumeSlider.setRange(-48, 0);
+	volumeSlider.setLookAndFeel(&myLookAndFeelV3);
 	volumeSlider.addListener(this); //Adding the slider listener which this class inherited. 
 
 
@@ -33,7 +33,7 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	drySlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	drySlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
 	drySlider.setRange(0.0, 3.0, 0.01);
-	drySlider.setLookAndFeel(&slaveXFeel);
+	drySlider.setLookAndFeel(&myLookAndFeelV3);
 	drySlider.addListener(this); //Adding the slider listener which this class inherited.
 
 	//The setup for dry slider with the label.
@@ -41,7 +41,7 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	wetSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	wetSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
 	wetSlider.setRange(0.0, 1.0, 0.01);
-	wetSlider.setLookAndFeel(&slaveXFeel);
+	wetSlider.setLookAndFeel(&myLookAndFeelV3);
 	wetSlider.addListener(this); //Adding the slider listener which this class inherited.
 
 
@@ -50,7 +50,7 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	feedbackSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	feedbackSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
 	feedbackSlider.setRange(0.0, 0.9, 0.05);
-	feedbackSlider.setLookAndFeel(&slaveXFeel);
+	feedbackSlider.setLookAndFeel(&myLookAndFeelV3);
 	feedbackSlider.addListener(this); //Adding the slider listener which this class inherited.
 
 	//The setup for time slider with the label.
@@ -58,7 +58,7 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	timeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	timeSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
 	timeSlider.setRange(0.1, 2.0, 0.1);
-	timeSlider.setLookAndFeel(&slaveXFeel);
+	timeSlider.setLookAndFeel(&myLookAndFeelV3);
 	timeSlider.addListener(this);//Adding the slider listener which this class inherited.
 
 	//Adding every component to the frame.

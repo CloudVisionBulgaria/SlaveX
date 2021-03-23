@@ -11,6 +11,7 @@
 #pragma once
 
 #include "PluginProcessor.h"
+#include "myLookAndFeel.h"
 
 //==============================================================================
 /**
@@ -33,6 +34,8 @@ public:
 	void resized() override;
 
 	SlaveXLookAndFeel slaveXFeel; //Instance for my look and feel class.
+
+	myLookAndFeelV3 myLookAndFeelV3;
 
 	//My sliders and labels.
 	Slider drySlider;
