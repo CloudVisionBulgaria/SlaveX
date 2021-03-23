@@ -72,12 +72,12 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	addAndMakeVisible(&timeLabel);
 	addAndMakeVisible(&timeSlider);
 
-	//Initiliazing the SliderAttachment scoped pointers. These are for maintaining the communication between the sliders and the parameters.
-	volumeAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "vol", volumeSlider);
-	timeAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "time", timeSlider);
-	feedAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "feedback", feedbackSlider);
-	dryAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "dry", drySlider);
-	wetAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "wet", wetSlider);
+	////Initiliazing the SliderAttachment scoped pointers. These are for maintaining the communication between the sliders and the parameters.
+	//volumeAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "vol", volumeSlider);
+	//timeAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "time", timeSlider);
+	//feedAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "feedback", feedbackSlider);
+	//dryAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "dry", drySlider);
+	//wetAttach = new AudioProcessorValueTreeState::SliderAttachment(processor.getState(), "wet", wetSlider);
 
 }
 
@@ -123,26 +123,26 @@ void SlaveXAudioProcessorEditor::resized()
 //This is the function from Slider::Listener that listens for slider changes. I change the corresponding values in the processor for corresponding sliders.
 void SlaveXAudioProcessorEditor::sliderValueChanged(Slider* slider)
 {
-	if (slider == &volumeSlider)
-	{
-		processor.rawSound = pow(10, volumeSlider.getValue() / 20); //rawSound is a logarithmic variable because we perceive sound logarithmicly. 
+	//if (slider == &volumeSlider)
+	//{
+	//	processor.rawSound = pow(10, volumeSlider.getValue() / 20); //rawSound is a logarithmic variable because we perceive sound logarithmicly. 
 
-	}
-	else if (slider == &drySlider)
-	{
-		processor.dryMix = (float)drySlider.getValue(); //Updating dryMix variable in the processor.
-	}
-	else if (slider == &wetSlider)
-	{
-		processor.wetMix = (float)wetSlider.getValue(); //Updating wetMix variable in the processor.
-	}
-	else if (slider == &feedbackSlider)
-	{
-		processor.feedback = (float)feedbackSlider.getValue(); //Updating feedback variable in the processor.
-	}
-	else if (slider == &timeSlider)
-	{
-		processor.delayTime = (double)timeSlider.getValue(); //Updating delayTime variable in the processor.
+	//}
+	//else if (slider == &drySlider)
+	//{
+	//	processor.dryMix = (float)drySlider.getValue(); //Updating dryMix variable in the processor.
+	//}
+	//else if (slider == &wetSlider)
+	//{
+	//	processor.wetMix = (float)wetSlider.getValue(); //Updating wetMix variable in the processor.
+	//}
+	//else if (slider == &feedbackSlider)
+	//{
+	//	processor.feedback = (float)feedbackSlider.getValue(); //Updating feedback variable in the processor.
+	//}
+	//else if (slider == &timeSlider)
+	//{
+	//	processor.delayTime = (double)timeSlider.getValue(); //Updating delayTime variable in the processor.
 
-	}
+	//}
 }

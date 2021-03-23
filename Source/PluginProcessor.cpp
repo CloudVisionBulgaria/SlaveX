@@ -11,22 +11,19 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-//==============================================================================
-/**
-	The constructor.
-	Before initializing the values, the constructor is initializing the input and output channels using an initializer list.
-	Since this is an effect plugin, we have a single input and a single output bus.
-*/
-SlaveXAudioProcessor::SlaveXAudioProcessor(AudioProcessor(BusesProperties().withOutput("Output", AudioChannelSet::stereo(), true)))
-{
+
+void SlaveXAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midi) {
+	ScopedNoDenormals noDenormals;
+	auto totalNumInputChannels = getTotalNumInputChannels();
+	auto totalNumOutputChannels = getTotalNumOutputChannels();
+
+	for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+		buffer.clear(i, 0, buffer.getNumSamples());
+
+
 
 }
 
-//==============================================================================
-bool SlaveXAudioProcessor::hasEditor() const
-{
-	return true; // (change this to false if you choose to not supply an editor)
-}
 
 AudioProcessorEditor* SlaveXAudioProcessor::createEditor()
 {
