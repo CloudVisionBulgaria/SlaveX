@@ -112,7 +112,7 @@ void SlaveXAudioProcessorEditor::resized()
 	feedbackLabel.setBounds(3.5 * w / 5 + w / 40, 0, w / 5, h / 6);
 	timeLabel.setBounds(3.5 * w / 5 + w / 20, h / 2, w / 5, h / 6);
 
-	volumeSlider.setBounds(w / 100, h / 4 - h / 12, 2 * w / 5, 3 * h / 4);
+	volumeSlider.setBounds(w / 100, h / 4 - h / 12, 2 * w / 5, 1 * h / 4);
 	drySlider.setBounds(2.5 * w / 5, h / 4 - h / 12, w / 5, h / 4);
 	wetSlider.setBounds(2.5 * w / 5, 3 * h / 4 - h / 12, w / 5, h / 4);
 	feedbackSlider.setBounds(3.5 * w / 5, h / 4 - h / 12, w / 5, h / 4);
