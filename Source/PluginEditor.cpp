@@ -17,11 +17,11 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 {
 	// Make sure that before the constructor has finished, you've set the
 	// editor's size to whatever you need it to be.
-	setSize(500, 300); //Setting the size of the program.
+	setSize(600, 300); //Setting the size of the program.
 
 	//The setup for volume slider with the label.
 	volumeLabel.setText("VOLUME", juce::NotificationType::dontSendNotification);
-	volumeSlider.setSliderStyle(Slider::SliderStyle::RotaryHorizontalDrag);
+	volumeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	volumeSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
 	volumeSlider.setRange(0.0, 48);
 	volumeSlider.setLookAndFeel(&slaveXFeel);
