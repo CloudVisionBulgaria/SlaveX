@@ -32,7 +32,7 @@ SlaveXAudioProcessor::SlaveXAudioProcessor()
 #endif
 {
 	//These are the ranges I wish to use with my parameters. NormalisableRange object will convert these ranges to the [0,1] range. Some of them have a third number which means the difference between each value. Default is 0.01. 
-	NormalisableRange<float> volumeRange(-48, 0);
+	NormalisableRange<float> volumeRange(0, 48);
 	NormalisableRange<float> timeRange(0.1, 2.0, 0.1);
 	NormalisableRange<float> dry_wetRange(0.0, 1.0, 0.01);
 	NormalisableRange<float> feedRange(0.0, 1.0, 0.05);
