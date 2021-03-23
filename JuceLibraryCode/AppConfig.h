@@ -43,7 +43,7 @@
 
 // END SECTION A
 
-#define JUCE_USE_DARK_SPLASH_SCREEN 1
+#define JUCE_USE_DARK_SPLASH_SCREEN 0
 
 #define JUCE_PROJUCER_VERSION 0x60007
 
@@ -164,7 +164,7 @@
 // juce_audio_processors flags:
 
 #ifndef    JUCE_PLUGINHOST_VST
- #define   JUCE_PLUGINHOST_VST 0
+ #define   JUCE_PLUGINHOST_VST 1
 #endif
 
 #ifndef    JUCE_PLUGINHOST_VST3

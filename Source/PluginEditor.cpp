@@ -19,20 +19,20 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	// editor's size to whatever you need it to be.
 	setSize(600, 300); //Setting the size of the program.
 
-	//The setup for volume slider with the label.
-	volumeLabel.setText("VOLUME", juce::NotificationType::dontSendNotification);
+	//The setup for volume slider with the label. 
+	volumeLabel.setText("МАМо", juce::NotificationType::dontSendNotification);
 	volumeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	volumeSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
-	volumeSlider.setRange(0.0, 48);
+	volumeSlider.setRange(0.0, 48.0, 0.01);
 	volumeSlider.setLookAndFeel(&slaveXFeel);
-	volumeSlider.addListener(this); //Adding the slider listener which this class inherited.
+	volumeSlider.addListener(this); //Adding the slider listener which this class inherited. 
 
 
 	//The setup for dry slider with the label.
 	dryLabel.setText("Dry Level", juce::NotificationType::dontSendNotification);
 	drySlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	drySlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
-	drySlider.setRange(0.0, 1.0, 0.01);
+	drySlider.setRange(0.0, 3.0, 0.01);
 	drySlider.setLookAndFeel(&slaveXFeel);
 	drySlider.addListener(this); //Adding the slider listener which this class inherited.
 

@@ -9,8 +9,6 @@
 */
 
 #include "PluginProcessor.h"
-
-#include "PluginProcessor.h"
 #include "PluginEditor.h"
 
 //==============================================================================
@@ -34,13 +32,13 @@ SlaveXAudioProcessor::SlaveXAudioProcessor()
 	//These are the ranges I wish to use with my parameters. NormalisableRange object will convert these ranges to the [0,1] range. Some of them have a third number which means the difference between each value. Default is 0.01. 
 	NormalisableRange<float> volumeRange(0, 48);
 	NormalisableRange<float> timeRange(0.1, 2.0, 0.1);
-	NormalisableRange<float> dry_wetRange(0.0, 1.0, 0.01);
+	NormalisableRange<float> dry_wetRange(0.0, 3.0, 0.01);
 	NormalisableRange<float> feedRange(0.0, 1.0, 0.05);
 
 	//Adding 5 parameters to our AudioProcessorValueTree object with ID's and initial values.
-	processorState.createAndAddParameter("vol", "VolumeLevel", "VolumeLevel", volumeRange, -10.0f, nullptr, nullptr);
+	processorState.createAndAddParameter("vol", "VolumeLevel", "VolumeLevel", volumeRange, 48.0f, nullptr, nullptr);
 	processorState.createAndAddParameter("time", "DelayTime", "DelayTime", timeRange, 0.5f, nullptr, nullptr);
-	processorState.createAndAddParameter("dry", "DryLevel", "DryLevel", dry_wetRange, 1.0f, nullptr, nullptr);
+	processorState.createAndAddParameter("dry", "DryLevel", "DryLevel", dry_wetRange, 3.0f, nullptr, nullptr);
 	processorState.createAndAddParameter("wet", "WetLevel", "WetLevel", dry_wetRange, 0.5f, nullptr, nullptr);
 	processorState.createAndAddParameter("feedback", "Feedback", "Feedback", feedRange, 0.2f, nullptr, nullptr);
 
