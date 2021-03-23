@@ -4,7 +4,7 @@
               displaySplashScreen="1" jucerFormatVersion="1" companyName="Cloud Vision Ltd."
               companyCopyright="Cloud Vision Ltd." companyWebsite="https://cloudvision.bg"
               companyEmail="bobi@cloudvision.bg" splashScreenColour="Dark"
-              projectType="audioplug" pluginFormats="buildStandalone">
+              projectType="audioplug" pluginFormats="buildStandalone,buildVST">
   <MAINGROUP id="bbkR0e" name="SlaveX">
     <GROUP id="{159D1182-B3FD-FFE1-6C83-12E309EEBEBE}" name="Source">
       <FILE id="dCN72n" name="PluginEditor.cpp" compile="1" resource="0"
