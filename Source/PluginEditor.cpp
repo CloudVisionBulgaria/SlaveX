@@ -23,7 +23,6 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	volumeLabel.setText("Volume", juce::NotificationType::dontSendNotification);
 	volumeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	volumeSlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
-	volumeSlider.setRange(-48, 0);
 	volumeSlider.setLookAndFeel(&myLookAndFeelV3);
 	volumeSlider.addListener(this); //Adding the slider listener which this class inherited. 
 
@@ -32,7 +31,7 @@ SlaveXAudioProcessorEditor::SlaveXAudioProcessorEditor(SlaveXAudioProcessor& p)
 	dryLabel.setText("Dry Level", juce::NotificationType::dontSendNotification);
 	drySlider.setSliderStyle(Slider::SliderStyle::Rotary);
 	drySlider.setTextBoxStyle(Slider::NoTextBox, true, 50, 50);
-	drySlider.setRange(0.0, 3.0, 0.01);
+	drySlider.setRange(0.0, 1.0, 0.01);
 	drySlider.setLookAndFeel(&myLookAndFeelV3);
 	drySlider.addListener(this); //Adding the slider listener which this class inherited.
 
@@ -96,7 +95,7 @@ void SlaveXAudioProcessorEditor::paint(Graphics& g)
 	g.fillAll(Colours::black);
 	g.setColour(Colours::white);
 	g.setFont(10.0f);
-	g.drawFittedText("Developed by SlaveX", getLocalBounds(), Justification::topLeft, 3);
+	g.drawFittedText("Developed by SlaveX", getLocalBounds(), Justification::topLeft, 1);
 
 }
 
