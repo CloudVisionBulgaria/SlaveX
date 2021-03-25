@@ -10,7 +10,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
-
+#include "PingPongDelay.h"
 
 void SlaveXAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midi) {
 
@@ -24,7 +24,8 @@ void SlaveXAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& 
 		buffer.clear(i, 0, buffer.getNumSamples());
 
 
-
+	PingPongDelay pingPongDelay;
+	// pingPongDelay.ApplyEffect(buffer);
 
 }
 

@@ -7,6 +7,9 @@
               projectType="audioplug" pluginFormats="buildVST" version="0.0.1">
   <MAINGROUP id="bbkR0e" name="SlaveX">
     <GROUP id="{159D1182-B3FD-FFE1-6C83-12E309EEBEBE}" name="Source">
+      <FILE id="KygvoI" name="PingPongDelay.h" compile="0" resource="0" file="Source/PingPongDelay.h"/>
+      <FILE id="rwfRjU" name="PingPongDelay.cpp" compile="1" resource="0"
+            file="Source/PingPongDelay.cpp"/>
       <FILE id="FxUKQB" name="myLookAndFeel.cpp" compile="1" resource="0"
             file="Source/myLookAndFeel.cpp"/>
       <FILE id="b8XJ6n" name="myLookAndFeel.h" compile="0" resource="0" file="Source/myLookAndFeel.h"/>
