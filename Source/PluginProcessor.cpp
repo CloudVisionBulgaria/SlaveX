@@ -13,12 +13,16 @@
 
 
 void SlaveXAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midi) {
-	ScopedNoDenormals noDenormals;
-	auto totalNumInputChannels = getTotalNumInputChannels();
-	auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-	for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+	const int numSamples = buffer.getNumSamples();
+
+	const int totalNumInputChannels = getTotalNumInputChannels();
+	const int totalNumOutputChannels = getTotalNumOutputChannels();
+
+	// clear any output channels that didn't contain input data
+	for (int i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
 		buffer.clear(i, 0, buffer.getNumSamples());
+
 
 
 

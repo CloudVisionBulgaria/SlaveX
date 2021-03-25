@@ -20,7 +20,7 @@ public:
 		.withOutput("Output", AudioChannelSet::stereo())
 		.withInput("Sidechain", AudioChannelSet::stereo()))
 	{
-		//addParameter(filter_band_size = new AudioParameterFloat("filter_band_size", "Filter Band Size (Octaves):", 0.25f, 10.0f, 1.0f));
+		//addParameter(filter_band_size = new AudioParameterFloat("filter_band_size", "Filter Band Size (Octaves):", 0.25f, 10.0f, 1.0f)); 
 	}
 
 	~SlaveXAudioProcessor() {}

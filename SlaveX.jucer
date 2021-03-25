@@ -4,9 +4,12 @@
               displaySplashScreen="1" jucerFormatVersion="1" companyName="Cloud Vision Ltd."
               companyCopyright="Cloud Vision Ltd." companyWebsite="https://cloudvision.bg"
               companyEmail="bobi@cloudvision.bg" splashScreenColour="Dark"
-              projectType="audioplug" pluginFormats="buildVST">
+              projectType="audioplug" pluginFormats="buildVST" version="0.0.1">
   <MAINGROUP id="bbkR0e" name="SlaveX">
     <GROUP id="{159D1182-B3FD-FFE1-6C83-12E309EEBEBE}" name="Source">
+      <FILE id="FxUKQB" name="myLookAndFeel.cpp" compile="1" resource="0"
+            file="Source/myLookAndFeel.cpp"/>
+      <FILE id="b8XJ6n" name="myLookAndFeel.h" compile="0" resource="0" file="Source/myLookAndFeel.h"/>
       <FILE id="dCN72n" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="U4Ygoo" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
